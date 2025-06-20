@@ -32,4 +32,3 @@ A Flask-based web application to help users report and find lost or found items.
 2. User reports a **found item** (details + photo)
 3. App compares found image with all lost images using ResNet features
 4. If similarity > 65%, a match is found and the owner is notified by email
-5. Users can view their own lost item reports on a separate page
