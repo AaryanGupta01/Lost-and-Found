@@ -1,0 +1,208 @@
+<html>
+<head>    
+<title></title>
+<style>
+
+.heading{
+    margin-top: 130px;
+    margin-left: 400px;
+    font-size: 52px;
+    line-height: 1.5;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b9009;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  font-size: 20px;
+}
+.card-container {
+  display: flex;
+  justify-content: center; /* centers the row horizontally */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  padding: 20px;
+}  
+.card {
+  align-items: center; 
+  display: grid;    
+  width: 500px;
+  height: 800px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+  }
+
+.card-content {
+    align-items: center; 
+    height: 800px;
+    display:grid;
+    background-color: #cdf981; 
+    transform: translateY(10px);
+}
+.logo {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  height: auto;
+  width: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration:solid;
+  color: #ffffff;
+  padding: 50px 54px;
+  transition: smooth background-color 3ms ease-in ;
+  
+}
+
+.nav-links li a:hover {
+  background-color: #94da8a;
+  border-radius: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration:solid;
+  height: 100px;
+  width: 200px;
+  text-align:center;
+  margin-top: -120px;
+  margin-left: 900px;
+  background-color: #42d858;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  border-color: #0b9009;
+  padding: 20px 24px;
+  border-radius: 20px;
+  border-color: #fff4e6;
+  color: white;
+}
+.btn:hover {
+  background-color: #0b9009;
+  color: black;  
+}
+.lost{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 4px;
+  text-decoration:solid;
+  margin-top: -330px;
+  margin-left: 900px;
+  background-color: #f43f5e;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 24px;
+  border-radius: 20px;
+  border-color: #fff4e6;
+  color: white;
+}
+.lost:hover {
+  background-color: #be2d4d;
+  color: black;
+}
+.btn-text {
+  padding-left: 20px; 
+}
+.sub{
+  margin-left: 400px;
+}
+.h1{
+    font-size: 40px;
+    text-align: center;
+}
+.desc{
+    max-width: 500;
+    max-height:200;
+    min-height: 100px;
+    min-width: 450px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size:medium;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.form{
+    border-radius: 10px;
+    font-size: large;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+body {
+    background: linear-gradient(-45deg, #a8e6cf, #dcedc1, #aed581, #81c784);
+    background-size: 400% 400%;
+    animation: greenGradientBG 10s ease infinite;
+}
+
+@keyframes greenGradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.inpt{
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size:medium;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.dt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body class="body" bgcolor="#fff4e6">
+  <nav class="navbar">
+  <div class="logo"><h1>ReclaimIt</h1></div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/lost">Lost</a></li>
+    <li><a href="/found">Found</a></li>
+    <li><a href="/contactUs">Contact Us</a></li>
+  </ul>  
+  </nav>  
+
+<div class="card-container">
+<div class="card">
+  <div class="card-content" align = "center">
+  <h1 class="h1">Report Lost Item</h1>
+  <form class="form" action="/lost" method="POST" enctype="multipart/form-data">
+  <div align="center">
+  <input class="inpt" type="text" name="name" placeholder="Enter Your Name" size="50px" required><br>
+  <input class="inpt" type="text" name="item" placeholder="Item Name" size="50px" required><br>
+  <input class="inpt" type="text" name="location" placeholder="Location" size="50px" required><br>
+  <textarea class="desc" name="descr" placeholder="Enter Description" required></textarea><br>
+  <input class="inpt" type="email" name="email" placeholder="Enter Email" size="50px" required><br>
+  <div class="dt">
+  <input class="inpt" type="time" name="time" placeholder="Time" size="50px" required/>&nbsp;&nbsp;
+  <input class="inpt" type="date" name="date" placeholder="Date" size="50px" required/><br>
+  </div><br>
+  <input class="inpt" type="file" name="file" placeholder="Upload an image" size="50px" >
+  <button class="inpt" type="submit">Submit</button>
+  </div>
+  </form>
+  </div>
+</div> 
+</div>

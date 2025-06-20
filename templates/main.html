@@ -1,0 +1,140 @@
+<html>
+<head>    
+<title></title>
+<style>
+.heading{
+    margin-top: 130px;
+    margin-left: 400px;
+    font-size: 52px;
+    line-height: 1.5;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b9009;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: #FFFF99;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  height: auto;
+  width: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration:solid;
+  color: #ffffff;
+  padding: 50px 54px;
+  transition: smooth background-color 3ms ease-in ;
+  
+}
+
+.nav-links li a:hover {
+  background-color: #94da8a;
+  border-radius: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration:solid;
+  height: 100px;
+  width: 200px;
+  text-align:center;
+  margin-top: -160px;
+  margin-left: 900px;
+  background-color: #42d858;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  border-color: #0b9009;
+  padding: 20px 24px;
+  border-radius: 20px;
+  border-color: #fff4e6;
+  color: white;
+}
+.btn:hover {
+  background-color: #0b9009;
+  color: black;  
+}
+.lost{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-decoration:solid;
+  margin-top: -280px;
+  margin-left: 900px;
+  background-color: #f43f5e;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 24px;
+  border-radius: 20px;
+  border-color: #fff4e6;
+  color: white;
+}
+.lost:hover {
+  background-color: #be2d4d;
+  color: black;
+}
+.btn-text {
+  padding-left: 20px; 
+}
+.sub{
+  margin-left: 400px;
+}
+.a{
+  color: white;
+  text-decoration: none; /*removes underline*/
+  display: inline-block;
+}
+body {
+    background: linear-gradient(-45deg, #a8e6cf, #dcedc1, #aed581, #81c784);
+    background-size: 400% 400%;
+    animation: greenGradientBG 10s ease infinite;
+}
+
+@keyframes greenGradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body class = "body" bgcolor="#fff4e6">
+  <nav class="navbar">
+  <div class="logo"><h1>ReclaimIt</h1></div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/lost">Lost</a></li>
+    <li><a href="/found">Found</a></li>
+    <li><a href="/contactUs">Contact Us</a></li>
+  </ul>  
+  </nav>  
+
+  <h1 class="heading">Find &<br> Recover <br><font color="#027148">With</font> Ease</h1><br>
+  
+  <a class="a" href="/lost"><button class="lost">Lost  &nbsp<img src="{{ url_for('static', filename='images/lost.png') }}" height="50" width="50"></button></a>
+  <a class="a" href="/found">
+  <button class="btn">
+  <span class="btn-text">Found</span>
+  <img src="{{ url_for('static', filename='images/f.png') }}" height="100" width="100"></button>
+  </a>
+
+<h3 class="sub">Experience effortless recovery with our dedicated lost and found service.</h3>
+
+</body>
