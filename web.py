@@ -185,7 +185,8 @@ def found():
                 subject="Regarding Potential Match For Your Lost Item",
                 recipients=[best_match.email],
                 body=f"Hello {best_match.name},\n\nA potential match has been found for your lost item {best_match.item}\n\n"
-                     f"It was found at {location} on {date} at {time}. Please visit the website for more details.\n\nThank You"
+                     f"It was found at {location} on {date} at {time}. Please visit the website for more details.\n"
+                     f" \nThank You"
                 )
                 mail.send(msg)
             except Exception as e:
